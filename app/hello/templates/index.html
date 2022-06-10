@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>DevOpsPlay</title>
+</head>
+<body>
+  <div class="container mt-5 text-center">
+    <h1>DevOps PlayGround</h1>
+    <p>A small project where step by step from development django app to testing and then deployment to server on VM</p>
+  </div>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-center">
+      <img src="{% static 'images/star.png' %}" alt="Star">
+    </div>
+  </div>
+  <div class="container mt-5 pt-5 text-center">
+    <h3>{{ title }}</h3>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
