@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'docker-compose --version'
+                sh 'docker-compose --version'
             }
         }
     }
