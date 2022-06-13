@@ -1,19 +1,20 @@
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('Lint') { 
+        stage('Build') {
             steps {
-                sh 'docker compose run --rm app sh -c "flake8"' 
+                echo 'Building..'
             }
         }
-        stage('Test') { 
+        stage('Test') {
             steps {
-                sh 'docker compose run --rm app sh -c "python manage.py waitdb && python manage.py test"'
+                echo 'Testing..'
             }
         }
-        stage('Deploy') { 
+        stage('Deploy') {
             steps {
-                // 
+                echo 'Deploying....'
             }
         }
     }
