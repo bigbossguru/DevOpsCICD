@@ -19,6 +19,7 @@ services:
       - DB_NAME=postgres
       - DB_USER=postgres
       - DB_PASS=postgres
+      - SECRET_KEY=Testing
     depends_on:
       - db
   
