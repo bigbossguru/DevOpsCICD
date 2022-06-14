@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
 
     stages {
         stage('Clean all dependencies') {
@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Build Django dockerfile project') {
             steps {
-                sh 'docker build -t django-app-project ~/DevOpsCICD'
+                sh 'docker build -t django-app-project .'
             }
         }
     }
