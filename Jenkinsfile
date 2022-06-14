@@ -34,5 +34,10 @@ pipeline {
                 sh 'docker build -t django-app-project .'
             }
         }
+        stage('Run Django project') {
+            steps {
+                sh 'docker run -dp 8000:8000 django-app-project'
+            }
+        }
     }
 }
