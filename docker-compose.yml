@@ -15,7 +15,7 @@ services:
       python manage.py migrate &&
       python manage.py runserver 0.0.0.0:8000"
     environment:
-      - DB_HOST=db
+      - DB_HOST=localhost
       - DB_NAME=postgres
       - DB_USER=postgres
       - DB_PASS=postgres
