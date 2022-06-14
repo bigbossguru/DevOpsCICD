@@ -29,4 +29,4 @@ ENV PATH="/py/bin:$PATH"
 
 USER django-user
 
-CMD [ "python3 manage.py runserver" ]
+CMD [ "python manage.py runserver" ]
