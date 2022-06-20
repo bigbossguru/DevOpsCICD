@@ -12,14 +12,14 @@ pipeline {
                 sh 'docker compose run --rm app sh -s "flake8"'
             }
         }
-        stage('Run simple Test case') {
-            steps {
-                sh 'docker compose run --rm app sh -c "python manage.py waitdb && python manage.py test"'
-            }
-        }
         stage('Make migrations database') {
             steps {
                 sh 'docker compose run --rm app sh -c "python manage.py makemigrations && python manage.py migrate"'
+            }
+        }
+        stage('Run simple Test case') {
+            steps {
+                sh 'docker compose run --rm app sh -c "python manage.py waitdb && python manage.py test"'
             }
         }
         stage('Clean all dependencies') {
